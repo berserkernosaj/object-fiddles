@@ -1,10 +1,15 @@
 //Once you complete a problem, open up Chrome and check the answer in the console.
 
 
-//Create an object called me. Give it a key of name with the value being your name, and another key of age with the value being your age. Then alert your name using dot notation.
+//Create an object called me. Give it a key of name with the value being your name,
+// and another key of age with the value being your age. Then alert your name using dot notation.
 
   //Code here
-
+var me = {
+  name: "Jason",
+  age: "26"
+};
+alert(me.name);
 
 
 
@@ -13,19 +18,39 @@
 
 
 
-//Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
+//Make a 'favoriteThings' object that contains the following keys:
+// band, food, person, book, movie, holiday.
+//Have the values to those keys be your favorite thing in that category.
 
   //Code here
+var favoriteThings = {
+  band: "All-American-Rejects",
+  food: "Pizza",
+  person: "who knows",
+  book: "Mistbourn",
+  movie: "Return of the Jedi",
+  holiday: "Christmas"
+};
 
-
-//After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
+//After you've made your object, add another key named
+// 'car' with the value being your favorite car and then another key named
+//'brand' with the value being your favorite brand.
 
   //Code here
+favoriteThings.car = "Jeep Rubicon";
+favoriteThings.brand = "Arizona";
 
 
-//Now change the food key in your favoriteThings object to be 'Lettuce' and change the book key in your favoriteThings object to be '50 Shades of Gray'.
 
+
+//Now change the food key in your favoriteThings object to be 'Lettuce'
+//and change the book key in your favoriteThings object to be '50 Shades of Gray'.
+//this will be a lie, as my favorite book would never be '50 Shades of Gray'!
+// and Lettuce is no one's favorite food!
   //Code here
+
+  favoriteThings.food = "Lettuce";
+  favoriteThings.book = "50 Shades of Gray";
 
 
 
@@ -43,18 +68,22 @@ Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. */
 
   //Code here
+var backPack = {};
+var item = "firstPocket";
+backPack[item] = "chapstick";
+backPack.color = "black";
 
 //After you do the above, alert your entire backPack object.
 
   //Code here
-
+alert(backPack);
 /*You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. */
 
   //Code here
 
-
+console.log(backPack);
 
 
 //NEXT PROBLEM
@@ -62,9 +91,20 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 
 
-//Create an 'alsoMe' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
+//Create an 'alsoMe' object with the following properties name, age, height,
+// gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
 
   //Code Here
+
+ var alsoMe = {
+    name: "Jason",
+    age:  "26",
+    height: "6, 4",
+    gender: "Male",
+    married: "No",
+    eyeColor: "Brown",
+    hairColor: "red-Brown"
+  };
 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
@@ -196,9 +236,9 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
   //Code Here
-  
-  
-  
+
+
+
 //NEXT PROBLEM
 
 
@@ -209,5 +249,3 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 */
 
   //Code Here
-
-
