@@ -109,7 +109,9 @@ console.log(backPack);
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
   //Code Here
-
+for (var p in alsoMe) {
+  alert(alsoMe[p]);
+}
 
 
 
@@ -118,14 +120,25 @@ console.log(backPack);
 
 
 
-//Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
+//Create an Object called 'album' with 5 keys named different song titles that you make up,
+// with the values being the length of each song.
 
   //Code Here
+var album = {
+  Horace: "10:00",
+  iLoveYou: "5:00",
+  song3: "3:00",
+  song4: "5:00",
+  song5: "4:00"
+};
+
 
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
-
+for (var t in album) {
+  alert(t);
+}
 
 
 
@@ -134,14 +147,25 @@ console.log(backPack);
 
 
 
-//Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
+//Create an object called states that has 5 US states as properties with the values being their population
+//(doesn't have to be accurate).
 
   //Code Here
-
+var states = {
+  Utah: 5000000,
+  Texas: 4000,
+  California: 0,
+  Arizona: 78000,
+  Idaho: 0
+};
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
   //Code Here
-
+for (var e in states) {
+  if (states[e] > 30000) {
+    alert(e);
+  }
+}
 
 
 
@@ -162,12 +186,22 @@ var user1 = {
 that each value is truthy. If it's not truthy, remove it from the object. */
 
   //Code Here
+  for (var l in user1) {
+    if (user1[l]) {
+    }
+    else {
+          delete user1[l];
+    }
+  }
 
-//Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
+//Once you get your truthy Object, Change the remaining values in the object
+// to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
   //Code Here
 
-
+user1.name = "Jason";
+user1.pwHash = "cake";
+user1.username = "Candy";
 
 
 //NEXT PROBLEM
@@ -190,10 +224,11 @@ var user2 = {
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
   //Code Here
-
+user2.name = "Tyler S. McGinnis";
+user2.email = "tyler.mcginnis@devmounta.in";
 //Now call the sayName method that's on the user object which will alert the users email
-
   //Code Here
+  user2.sayName();
 
 
 
@@ -206,16 +241,41 @@ var user2 = {
 //Create an empty object called methodCollection.
 
   //Code Here
+var methodCollection = {};
 
 /*Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. */
 
   //Code Here
-
+methodCollection.alertHello = function () {
+  alert("hello");
+};
+methodCollection.logHello = function () {
+  console.log("hello");
+};
 //Now call your alertHello and logHello methods.
 
   //Code Here
+methodCollection.alertHello();
+methodCollection.logHello();
+
+
+//NEXT PROBLEM
+
+
+
+// Create a function called MakePerson which takes in name, birthday,
+//ssn as its parameters and returns a new object with all of the information that you passed in.
+
+  //Code Here
+function MakePerson(name, birthday, ssn) {
+  return {
+    name: name,
+    birthday: birthday,
+    ssn: ssn
+  };
+}
 
 
 
@@ -223,29 +283,39 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 
 
-// Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
+// Create a function called MakeCard which takes in all the data it needs to make
+//a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
   //Code Here
 
-
-
-//NEXT PROBLEM
-
-
-
-// Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
-
-  //Code Here
-
-
+function MakeCard(number, fullname, expiration) {
+  return {
+    number: number,
+    fullname: fullname,
+    expiration: expiration
+  };
+}
 
 //NEXT PROBLEM
 
 
 
-/* As of this point you should have a MakePerson and a MakeCard function which returns you either a person or a credit card object.
-   Now, create a bindCard function that takes in a person object as its first parameter and a creditcard object as its second parameter.
-   Have bindCard merge the two parameters together into a new object which contains all the properties from the person as well as the creditcard.
+/* As of this point you should have a MakePerson and a MakeCard function which returns you either a
+ person or a credit card object.
+   Now, create a bindCard function that takes in a person object as its first parameter and a creditcard
+   object as its second parameter.
+   Have bindCard merge the two parameters together into a new object which contains all the properties
+    from the person as well as the creditcard.
 */
 
   //Code Here
+function bindCard(person, creditcard) {
+  var cardMan = {};
+  for (var g in person) {
+    cardMan[g] = person[g];
+  }
+  for (var o in creditcard) {
+    cardMan[o] = creditcard[o];
+  }
+  return cardMan;
+}
